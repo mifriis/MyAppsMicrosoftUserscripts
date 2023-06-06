@@ -1,3 +1,9 @@
+# Collection
+
+## AWS-SSO-Name-Replacer
+
+changes `AWS-SSO-123123123123-my-account-name` to `my-account-name - AWS-SSO-123123123123`
+
 ## Installation
 
 1. Make sure you have user scripts enabled in your browser (these instructions refer to the latest versions of the browser):
@@ -7,4 +13,4 @@
 	* Safari - install [Tampermonkey](https://apps.apple.com/app/tampermonkey/id1482490089)
 	* Edge- install [Tampermoneky](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
 
-2. Install: <https://raw.githubusercontent.com/mifriis/MyAppsMicrosoftUserscripts/main/aws-sso-name-replacer.user.js>
+2. Install AWS-SSO-Name-Replacer: <https://raw.githubusercontent.com/mifriis/MyAppsMicrosoftUserscripts/main/aws-sso-name-replacer.user.js>

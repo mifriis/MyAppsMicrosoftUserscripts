@@ -6,12 +6,11 @@
 // ==/UserScript==
 
 function runWhenReady(readySelector, callback) {
-    var numAttempts = 0;
-    var tryNow = function() {
-        var elem = document.querySelector(readySelector);
+    let numAttempts = 0;
+    let tryNow = function() {
+        let elem = document.querySelector(readySelector);
         if (elem) {
-          setTimeout(() => {callback(elem);}, "500");
-            //callback(elem);
+          setTimeout(() => {callback(elem);}, "500"); //sometimes it takes a while to load them all
         } else {
             numAttempts++;
             if (numAttempts >= 34) {
@@ -26,8 +25,8 @@ function runWhenReady(readySelector, callback) {
 
 function getMatches(string, regex, index) {
   index || (index = 1); 
-  var matches = [];
-  var match;
+  let matches = [];
+  let match;
   while (match = regex.exec(string)) {
     matches.push(match[index]);
   }
@@ -36,7 +35,7 @@ function getMatches(string, regex, index) {
 
 function replaceAccountNames() {
   const regexp = /(AWS-SSO-\d{12}-)(.*)/g;
-  var cells = document.getElementsByClassName("gridLabel-141");
+  let cells = document.getElementsByClassName("gridLabel-141");
   for (var i = 0; i < cells.length; i++) {
     let accountName = cells.item(i).innerHTML
     let prefix = getMatches(accountName, regexp, 1);
